@@ -1,0 +1,230 @@
+/* ========== TABLE DARK MODE COMPREHENSIVE FIXES ========== */
+/* Ensures all table elements, data, and buttons are visible and properly styled in dark mode */
+
+/* 1. Table Data Text Visibility */
+[data-bs-theme="dark"] .modern-table tbody tr {
+  color: #e5e7eb !important;
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr td {
+  color: #d1d5db !important;
+  background-color: inherit !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:nth-child(even) {
+  background-color: #111827 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:nth-child(odd) {
+  background-color: #1f2937 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:hover {
+  background-color: #2d3748 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:hover td {
+  color: #f3f4f6 !important;
+  background-color: #2d3748 !important;
+}
+
+/* 2. Table Headers */
+[data-bs-theme="dark"] .modern-table thead {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+}
+
+[data-bs-theme="dark"] .modern-table thead tr {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+}
+
+[data-bs-theme="dark"] .modern-table thead th {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+
+/* 3. Table Action Buttons - CRITICAL FIX */
+[data-bs-theme="dark"] .table-actions .btn {
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+  font-weight: 600 !important;
+}
+
+/* View button (info/blue) */
+[data-bs-theme="dark"] .table-actions .btn-view {
+  background-color: #0d47a1 !important;
+  color: #e3f2fd !important;
+  border: 1px solid #1976d2 !important;
+}
+
+[data-bs-theme="dark"] .table-actions .btn-view:hover,
+[data-bs-theme="dark"] .table-actions .btn-view:focus {
+  background-color: #1565c0 !important;
+  border-color: #42a5f5 !important;
+  color: #ffffff !important;
+}
+
+/* Edit button (warning/orange) */
+[data-bs-theme="dark"] .table-actions .btn-edit {
+  background-color: #f57f17 !important;
+  color: #ffffff !important;
+  border: 1px solid #ff9100 !important;
+}
+
+[data-bs-theme="dark"] .table-actions .btn-edit:hover,
+[data-bs-theme="dark"] .table-actions .btn-edit:focus {
+  background-color: #ff9100 !important;
+  border-color: #ffa726 !important;
+  color: #ffffff !important;
+}
+
+/* Delete button (danger/red) */
+[data-bs-theme="dark"] .table-actions .btn-delete {
+  background-color: #c62828 !important;
+  color: #ffffff !important;
+  border: 1px solid #e53935 !important;
+}
+
+[data-bs-theme="dark"] .table-actions .btn-delete:hover,
+[data-bs-theme="dark"] .table-actions .btn-delete:focus {
+  background-color: #e53935 !important;
+  border-color: #ef5350 !important;
+  color: #ffffff !important;
+}
+
+/* 4. Bootstrap Button Classes in Tables */
+[data-bs-theme="dark"] .btn-primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-primary:hover,
+[data-bs-theme="dark"] .btn-primary:focus {
+  background-color: #1565c0 !important;
+  border-color: #1565c0 !important;
+}
+
+[data-bs-theme="dark"] .btn-secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-secondary:hover,
+[data-bs-theme="dark"] .btn-secondary:focus {
+  background-color: #616161 !important;
+  border-color: #616161 !important;
+}
+
+[data-bs-theme="dark"] .btn-danger {
+  background-color: #c62828 !important;
+  border-color: #c62828 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-danger:hover,
+[data-bs-theme="dark"] .btn-danger:focus {
+  background-color: #e53935 !important;
+  border-color: #e53935 !important;
+}
+
+[data-bs-theme="dark"] .btn-warning {
+  background-color: #f57f17 !important;
+  border-color: #f57f17 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-warning:hover,
+[data-bs-theme="dark"] .btn-warning:focus {
+  background-color: #ff9100 !important;
+  border-color: #ff9100 !important;
+}
+
+/* 5. Status Badges */
+[data-bs-theme="dark"] .status-badge {
+  background-color: #1f2937 !important;
+  color: #e5e7eb !important;
+  border: 1px solid #4b5563 !important;
+}
+
+[data-bs-theme="dark"] .status-badge.pending {
+  background-color: #78350f !important;
+  color: #fbbf24 !important;
+  border: 1px solid #f59e0b !important;
+}
+
+[data-bs-theme="dark"] .status-badge.approved {
+  background-color: #065f46 !important;
+  color: #a7f3d0 !important;
+  border: 1px solid #10b981 !important;
+}
+
+[data-bs-theme="dark"] .status-badge.rejected {
+  background-color: #7f1d1d !important;
+  color: #fca5a5 !important;
+  border: 1px solid #ef4444 !important;
+}
+
+/* 6. Table Details/Content Lists */
+[data-bs-theme="dark"] .details-list {
+  color: #e5e7eb !important;
+}
+
+[data-bs-theme="dark"] .details-list .label {
+  color: #f3f4f6 !important;
+  font-weight: 700 !important;
+}
+
+[data-bs-theme="dark"] .details-list .value {
+  color: #d1d5db !important;
+}
+
+/* 7. Table Empty State */
+[data-bs-theme="dark"] .table-empty {
+  background-color: #1f2937 !important;
+  color: #9ca3af !important;
+}
+
+[data-bs-theme="dark"] .table-empty-text {
+  color: #f3f4f6 !important;
+}
+
+[data-bs-theme="dark"] .table-empty-subtext {
+  color: #9ca3af !important;
+}
+
+/* 8. Form Controls in Tables (filters, search) */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+  background-color: #2d2d2d !important;
+  color: #e5e7eb !important;
+  border-color: #4b5563 !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+  background-color: #3a3a3a !important;
+  color: #e5e7eb !important;
+  border-color: #42a5f5 !important;
+  box-shadow: 0 0 0 0.25rem rgba(66, 165, 245, 0.25) !important;
+}
+
+/* 9. Badges and Pills in Table Cells */
+[data-bs-theme="dark"] .badge {
+  background-color: #1976d2 !important;
+  color: #e3f2fd !important;
+}
+
+/* 10. Links in Tables */
+[data-bs-theme="dark"] .modern-table a {
+  color: #42a5f5 !important;
+  text-decoration: none !important;
+}
+
+[data-bs-theme="dark"] .modern-table a:hover {
+  color: #64b5f6 !important;
+  text-decoration: underline !important;
+}

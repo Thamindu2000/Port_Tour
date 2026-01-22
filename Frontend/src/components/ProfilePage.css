@@ -1,0 +1,277 @@
+/* ---- 1. MAIN CARD ---- */
+.profile-card {
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  width: 380px; /* Or your preferred width */
+  margin: 20px auto; /* Centers the card on the page */
+  overflow: hidden; /* Ensures rounded corners are clean */
+  transition: all 0.3s ease;
+}
+
+/* Light mode styles */
+.profile-container:not(.dark-mode) .profile-card {
+  background-color: #ffffff;
+  color: #212529;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile card always white background */
+.profile-card {
+  background-color: #ffffff !important;
+}
+
+/* ---- DARK MODE SUPPORT ---- */
+.profile-page-container.dark-mode {
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+}
+
+.profile-page-container.dark-mode .profile-card-professional {
+  background-color: #2a2a2a !important;
+  color: #f8f9fa;
+  border: 1px solid #444;
+}
+
+.profile-page-container.dark-mode h1,
+.profile-page-container.dark-mode h2,
+.profile-page-container.dark-mode h3 {
+  color: #f8f9fa;
+}
+
+.profile-page-container.dark-mode .full-name,
+.profile-page-container.dark-mode .username,
+.profile-page-container.dark-mode .institution {
+  color: #f8f9fa;
+}
+
+.profile-page-container.dark-mode .bio-text,
+.profile-page-container.dark-mode .info-value {
+  color: #cccccc;
+}
+
+.profile-page-container.dark-mode .bio-textarea {
+  background-color: #333;
+  color: #f8f9fa;
+  border: 1px solid #555;
+}
+
+.profile-page-container.dark-mode .btn-primary {
+  background-color: #ffc107;
+  color: #000;
+  border-color: #ffc107;
+}
+
+.profile-page-container.dark-mode .btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.profile-page-container.dark-mode .btn-secondary,
+.profile-page-container.dark-mode .btn-outline {
+  background-color: #444;
+  color: #f8f9fa;
+  border-color: #666;
+}
+
+.profile-page-container.dark-mode .btn-secondary:hover,
+.profile-page-container.dark-mode .btn-outline:hover {
+  background-color: #555;
+  border-color: #777;
+}
+
+/* Dark mode styles - REMOVED as we now use Tailwind dark: classes */
+/* (Your CSS file has dark mode rules, but they are commented out or removed) */
+/* This new JS file will respect that and use the :not(.dark-mode) selectors */
+
+
+/* ---- 2. HEADER ---- */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid;
+  transition: all 0.3s ease;
+}
+
+/* Light mode header */
+.profile-container:not(.dark-mode) .profile-header {
+  background-color: #f8f9fa;
+  border-bottom-color: #dee2e6;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Light mode header text */
+.profile-container:not(.dark-mode) .profile-header h2 {
+  color: #212529;
+}
+
+/* ---- 3. BODY ---- */
+.profile-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers everything */
+}
+
+/* ---- 4. PROFILE PICTURE (THE CIRCLE) ---- */
+.avatar-container {
+  position: relative;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;     /* This makes it a circle */
+  object-fit: cover;      /* This prevents stretching */
+  border: 4px solid #0d6efd; /* Blue border */
+  margin-bottom: 15px;
+  background-color: #444; /* Fallback if image fails */
+}
+
+.btn-change-photo {
+  /* This moves the button slightly up, over the bottom of the photo */
+  margin-top: -35px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode change photo button */
+.profile-container:not(.dark-mode) .btn-change-photo {
+  background-color: #ffffff;
+  color: #0d6efd;
+}
+
+/* ---- 5. USER DETAILS ---- */
+.profile-name {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Light mode name */
+.profile-container:not(.dark-mode) .profile-name {
+  color: #212529;
+}
+
+.profile-edit-form {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile-edit-form .form-label {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Light mode form labels */
+.profile-container:not(.dark-mode) .profile-edit-form .form-label {
+  color: #212529;
+}
+
+.profile-edit-form .form-control {
+  border-radius: 6px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+/* Light mode form controls */
+.profile-container:not(.dark-mode) .profile-edit-form .form-control {
+  background-color: #ffffff;
+  border: 2px solid #ced4da;
+  color: #212529;
+}
+
+.profile-container:not(.dark-mode) .profile-edit-form .form-control:focus {
+  background-color: #ffffff;
+  border-color: #0d6efd;
+  color: #212529;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.profile-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  width: 100%; /* Ensures all text aligns */
+}
+
+.profile-details li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Light mode details */
+.profile-container:not(.dark-mode) .profile-details li {
+  color: #6c757d;
+}
+
+.profile-container:not(.dark-mode) .profile-details strong {
+  color: #212529;
+}
+
+.profile-details strong {
+  margin-right: 8px;
+  width: 100px;
+  display: inline-block;
+}
+
+/* ---- 6. ACTION BUTTONS (THE FIX) ---- */
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adds space between buttons */
+  width: 100%;
+}
+
+/* Base button style */
+.btn {
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #0d6efd; /* Blue border */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+/* Primary Button (Edit Profile) */
+.btn-primary {
+  background-color: #0d6efd; /* Blue background */
+  color: #ffffff; /* White text */
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+/* Secondary Button (Change Password / Change Photo) */
+.btn-secondary-outline {
+  background-color: transparent; /* No background */
+  color: #0d6efd; /* Blue text */
+}
+
+.btn-secondary-outline:hover {
+  background-color: #0d6efd; /* Blue background on hover */
+  color: #ffffff; /* White text on hover */
+}

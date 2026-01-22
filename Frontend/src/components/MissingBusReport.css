@@ -1,0 +1,209 @@
+/* Missing Bus Report Modal Styles - Glassmorphism UI */
+
+.missing-bus-modal .modal-dialog {
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 1rem);
+}
+
+.missing-bus-modal .modal-content {
+  background: rgba(255, 255, 255, 0.15) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: white;
+}
+
+
+.missing-bus-modal {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.missing-bus-modal .modal-header {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+
+.missing-bus-modal .modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.missing-bus-modal .modal-body {
+  padding: 2rem;
+  background: transparent;
+}
+
+.missing-bus-modal .booking-info {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid rgba(0, 123, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.missing-bus-modal .booking-info h6 {
+  margin: 0 0 0.5rem 0;
+  color: white;
+  font-weight: 600;
+}
+
+.missing-bus-modal .booking-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.missing-bus-modal .bus-card {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+
+.missing-bus-modal .bus-card:hover {
+  border-color: rgba(0, 123, 255, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.missing-bus-modal .bus-card .card-body {
+  padding: 1rem;
+}
+
+.missing-bus-modal .bus-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.missing-bus-modal .bus-company {
+  font-weight: 600;
+  color: #4dabf7;
+  font-size: 1.1rem;
+}
+
+.missing-bus-modal .bus-number {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.missing-bus-modal .reason-textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.missing-bus-modal .reason-textarea:focus {
+  border-color: rgba(0, 123, 255, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.missing-bus-modal .reason-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.missing-bus-modal .modal-footer {
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 0 0 15px 15px;
+}
+
+.missing-bus-modal .btn-cancel {
+  background: rgba(108, 117, 125, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.missing-bus-modal .btn-cancel:hover {
+  background: rgba(90, 98, 104, 0.9);
+  transform: translateY(-1px);
+}
+
+.missing-bus-modal .btn-submit {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.8) 0%, rgba(32, 201, 151, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.missing-bus-modal .btn-submit:hover {
+  background: linear-gradient(135deg, rgba(33, 136, 56, 0.9) 0%, rgba(26, 160, 133, 0.9) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.missing-bus-modal .btn-submit:disabled {
+  background: rgba(108, 117, 125, 0.6);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form control placeholder styling */
+.missing-bus-modal .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+.missing-bus-modal .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.missing-bus-modal .form-control::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .missing-bus-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .missing-bus-modal .modal-body {
+    padding: 1rem;
+  }
+
+  .missing-bus-modal .bus-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .missing-bus-modal .bus-company {
+    margin-bottom: 0.5rem;
+  }
+}

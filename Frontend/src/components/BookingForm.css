@@ -1,0 +1,372 @@
+/* =================================
+   DATEPICKER STYLES (Your Original Code)
+   ================================= */
+.custom-datepicker-calendar {
+  background-color: #ffffff !important;
+  border: 2px solid #007bff !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25) !important;
+  font-family: inherit !important;
+  z-index: 10000 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 0.25rem !important;
+}
+
+.custom-datepicker-popper {
+  z-index: 10000 !important;
+}
+
+.datepicker-wrapper {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* Dark mode support for datepicker */
+[data-bs-theme="dark"] .custom-datepicker-calendar {
+  background-color: #343a40 !important;
+  border-color: #495057 !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__header {
+  background-color: #495057 !important;
+  border-bottom: 1px solid #6c757d !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__current-month,
+[data-bs-theme="dark"] .react-datepicker-time__header {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day-name,
+[data-bs-theme="dark"] .react-datepicker__day {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day:hover {
+  background-color: #495057 !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day--selected {
+  background-color: #0d6efd !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day--keyboard-selected {
+  background-color: #0d6efd !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__navigation {
+  border-color: #6c757d !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__navigation:hover {
+  background-color: #495057 !important;
+}
+
+.react-datepicker-popper {
+  z-index: 10000 !important;
+}
+
+.react-datepicker {
+  font-size: 0.875rem !important;
+  border-radius: 0.375rem !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+.react-datepicker__month-container {
+  background-color: inherit !important;
+}
+
+.react-datepicker__day {
+  border-radius: 0.25rem !important;
+  margin: 0.125rem !important;
+  padding: 0.25rem !important;
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  line-height: 1.25rem !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #e9ecef !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day:hover {
+  background-color: #495057 !important;
+}
+
+.react-datepicker__header {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  border-radius: 0.375rem 0.375rem 0 0 !important;
+  padding: 0.5rem !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__header {
+  background-color: #495057 !important;
+  border-bottom-color: #6c757d !important;
+}
+
+.react-datepicker__navigation {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  top: 0.5rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 0.25rem !important;
+  border: 0.125rem solid transparent !important;
+}
+
+.react-datepicker__navigation:hover {
+  background-color: #e9ecef !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__navigation:hover {
+  background-color: #495057 !important;
+}
+
+.react-datepicker__current-month {
+  color: #212529 !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__current-month {
+  color: #f8f9fa !important;
+}
+
+.react-datepicker__day-names,
+.react-datepicker__week {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.react-datepicker__day-name {
+  color: #6c757d !important;
+  font-weight: 500 !important;
+  width: 1.75rem !important;
+  text-align: center !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day-name {
+  color: #adb5bd !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #6c757d !important;
+  cursor: not-allowed !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day--disabled {
+  color: #6c757d !important;
+}
+
+.react-datepicker__day--today {
+  background-color: #fff3cd !important;
+  color: #856404 !important;
+  font-weight: bold !important;
+}
+
+[data-bs-theme="dark"] .react-datepicker__day--today {
+  background-color: rgba(255, 193, 7, 0.2) !important;
+  color: #ffc107 !important;
+}
+
+/* =================================
+   PLACEHOLDER COLOR FIX (From previous step)
+   ================================= */
+
+/* Light Mode Placeholder */
+.booking-form .form-control::placeholder,
+.booking-form .react-datepicker__input-container input::placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+/* Other browsers */
+.booking-form .form-control::-webkit-input-placeholder,
+.booking-form .react-datepicker__input-container input::-webkit-input-placeholder {
+  color: #6c757d !important;
+}
+.booking-form .form-control::-moz-placeholder,
+.booking-form .react-datepicker__input-container input::-moz-placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+/* Dark Mode Placeholder */
+[data-bs-theme="dark"] .booking-form .form-control::placeholder,
+[data-bs-theme="dark"] .booking-form .react-datepicker__input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+/* Other browsers */
+[data-bs-theme="dark"] .booking-form .form-control::-webkit-input-placeholder,
+[data-bs-theme="dark"] .booking-form .react-datepicker__input-container input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+[data-bs-theme="dark"] .booking-form .form-control::-moz-placeholder,
+[data-bs-theme="dark"] .booking-form .react-datepicker__input-container input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
+
+/* =================================
+   === NEW DECENT STYLES START HERE ===
+   ================================= */
+
+/* 1. Main Form Card Styling (Glassmorphism) */
+.booking-form.card {
+  /* We use the inline styles from your JS as a base */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  overflow: hidden; /* Important for sticky header */
+
+  /* === LIGHT YELLOW BACKGROUND FOR LIGHT MODE === */
+  /* #FFFFE0 (LightYellow) with 95% opacity */
+  background-color: rgba(255, 255, 224, 0.95); 
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* 2. Sticky Header Styling */
+.booking-form .card-header {
+  /* These styles were inline in your JS */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Softer shadow */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important; 
+}
+
+/* 3. Scrollable Sections (Teachers, Guardians, Buses) */
+.form-section-scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  /* Light background to separate it */
+  background-color: rgba(0, 0, 0, 0.02); 
+}
+
+[data-bs-theme="dark"] .form-section-scrollable {
+  border-color: #495057;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 4. Individual Item styling (for teachers, guardians) */
+.form-section-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--bs-card-bg, #ffffff);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+[data-bs-theme="dark"] .form-section-item {
+   border-color: #5a5a5a;
+   background-color: #343a40;
+}
+
+/* 5. Styling for the Bus Card (it's already a <Card>) */
+.form-section-scrollable .card {
+   margin-bottom: 1rem;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* 6. Availability Checker Styles (Replaces JS inline styles) */
+.availability-checker {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  max-width: 400px; /* From your JS */
+}
+
+/* --- Loading State --- */
+.availability-checker.loading {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+[data-bs-theme="dark"] .availability-checker.loading {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* --- Available State --- */
+.availability-checker.available {
+  background-color: rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+[data-bs-theme="dark"] .availability-checker.available {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.availability-checker.available .status-title { color: #16a34a; }
+.availability-checker.available .status-text { color: #15803d; }
+[data-bs-theme="dark"] .availability-checker.available .status-title { color: #86efac; }
+[data-bs-theme="dark"] .availability-checker.available .status-text { color: #bbf7d0; }
+
+
+/* --- Not Available State --- */
+.availability-checker.not-available {
+  background-color: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+[data-bs-theme="dark"] .availability-checker.not-available {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.availability-checker.not-available .status-title { color: #dc2626; }
+.availability-checker.not-available .status-text { color: #b91c1c; }
+[data-bs-theme="dark"] .availability-checker.not-available .status-title { color: #fca5a5; }
+[data-bs-theme="dark"] .availability-checker.not-available .status-text { color: #fecaca; }
+
+
+/* --- Inner Text Styles --- */
+.availability-checker .status-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+.availability-checker .status-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.availability-checker .status-text {
+  font-size: 0.875rem;
+  margin-top: 0.15rem;
+}
+
+/* 7. Grid layout for side-by-side fields */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* On mobile, stack them */
+@media (max-width: 576px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0; /* No gap needed when stacked */
+  }
+}

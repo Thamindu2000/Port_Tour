@@ -1,0 +1,520 @@
+/*
+ * PROFESSIONAL ENTERPRISE TABLE STYLES
+ * Modern, clean, highly readable tables with excellent data clarity
+ */
+
+/* 1. TABLE CONTAINER - Responsive wrapper */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.10),
+    0 16px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+  background: #ffffff;
+}
+
+/* 2. GENERAL TABLE STYLING */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 3. HEADER STYLING - Professional clean single line */
+.modern-table thead {
+  background: #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #2d3748;
+}
+
+.modern-table th {
+  background: #1f2937;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 18px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  box-shadow: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 80px;
+}
+
+.modern-table th:first-child {
+  border-top-left-radius: 0;
+  padding-left: 24px;
+}
+
+.modern-table th:last-child {
+  border-top-right-radius: 0;
+  padding-right: 24px;
+}
+
+/* 4. BODY CELL STYLING - Clear, organized */
+.modern-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.modern-table tbody tr:hover {
+  background-color: #e8f4f8;
+  box-shadow: inset 0 0 0 1px #b0d4dd;
+}
+
+.modern-table tbody tr:hover td {
+  background-color: #e8f4f8;
+  color: #000000;
+}
+
+.modern-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.modern-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.modern-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.modern-table td {
+  padding: 16px 18px;
+  color: #000000;
+  font-weight: 600;
+  vertical-align: middle;
+  background-color: #ffffff;
+  /* === ❇️ FIX 1 (Data Piling) === */
+  /* Removed: max-width: 200px; */
+  /* Removed: overflow-wrap: break-word; */
+  /* Changed: white-space: normal; to white-space: nowrap; */
+  white-space: nowrap;
+}
+
+.modern-table td:first-child {
+  padding-left: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modern-table td:last-child {
+  padding-right: 24px;
+  text-align: right;
+}
+
+/* 5. STRIPED ROWS for better readability */
+.modern-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.modern-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.modern-table tbody tr:nth-child(even) td {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.modern-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* 6. DATA DENSITY CONTROL */
+.modern-table.compact td {
+  padding: 12px 15px;
+}
+
+.modern-table.compact th {
+  padding: 12px 15px;
+}
+
+.modern-table.spacious td {
+  padding: 20px 22px;
+}
+
+.modern-table.spacious th {
+  padding: 20px 22px;
+}
+
+/* 7. STATUS BADGES & INDICATORS */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.status-badge.approved {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.status-badge.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.status-badge.active {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.status-badge.inactive {
+  background-color: #e5e7eb;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* 8. DETAILS AND NESTED DATA */
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.details-list span {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.details-list .label {
+  font-weight: 600;
+  color: #000000;
+  min-width: 100px;
+  margin-right: 8px;
+}
+
+.details-list .value {
+  color: #000000;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+/* 9. ACTION BUTTONS IN TABLES */
+.table-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.table-actions .btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  /* === ❇️ FIX 2 (Broken Buttons) === */
+  white-space: nowrap;
+}
+
+.table-actions .btn-view {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.table-actions .btn-view:hover {
+  background-color: #bfdbfe;
+  border-color: #60a5fa;
+}
+
+.table-actions .btn-edit {
+  background-color: #fef08a;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+
+.table-actions .btn-edit:hover {
+  background-color: #fde047;
+  border-color: #facc15;
+}
+
+.table-actions .btn-delete {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.table-actions .btn-delete:hover {
+  background-color: #fca5a5;
+  border-color: #f87171;
+}
+
+/* 10. EMPTY STATE */
+.table-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.table-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.table-empty-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.table-empty-subtext {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* 11. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .modern-table {
+    font-size: 13px;
+  }
+
+  .modern-table th {
+    padding: 12px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modern-table td {
+    padding: 12px;
+    white-space: nowrap; /* Keep nowrap here too */
+  }
+
+  .modern-table td:first-child {
+    padding-left: 16px;
+  }
+
+  .modern-table td:last-child {
+    padding-right: 16px;
+  }
+
+  .table-actions {
+    gap: 4px;
+  }
+
+  .table-actions .btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    border-radius: 8px;
+  }
+
+  .modern-table th {
+    font-size: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modern-table td {
+    padding: 10px;
+    font-size: 12px;
+    white-space: nowrap; /* And here */
+  }
+
+  .status-badge {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+}
+
+/* 12. DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+  .table-container {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      0 4px 8px rgba(0, 0, 0, 0.4),
+      0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .modern-table {
+    background-color: #1f2937;
+    color: #e5e7eb;
+  }
+
+  .modern-table th {
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    color: #f3f4f6;
+  }
+
+  .modern-table tbody tr:nth-child(even) {
+    background-color: #111827;
+  }
+
+  .modern-table tbody tr:nth-child(odd) {
+    background-color: #1f2937;
+  }
+
+  .modern-table tbody tr:hover {
+    background-color: #374151;
+  }
+
+  .modern-table td {
+    color: #d1d5db;
+    border-bottom-color: #374151;
+  }
+
+  .modern-table td:first-child {
+    color: #f3f4f6;
+  }
+
+  .details-list .label {
+    color: #f3f4f6;
+  }
+
+  .details-list .value {
+    color: #d1d5db;
+  }
+
+  .table-empty {
+    color: #9ca3af;
+  }
+}
+
+/* Prefer explicit data attribute when app controls theme */
+[data-bs-theme="dark"] .table-container {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .modern-table {
+  background-color: #1f2937 !important;
+  color: #e5e7eb !important;
+}
+
+[data-bs-theme="dark"] .modern-table thead {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+  color: #f3f4f6 !important;
+}
+
+[data-bs-theme="dark"] .modern-table th {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+  color: #f3f4f6 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:nth-child(even) {
+  background-color: #111827 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:nth-child(odd) {
+  background-color: #1f2937 !important;
+}
+
+[data-bs-theme="dark"] .modern-table tbody tr:hover {
+  background-color: #374151 !important;
+}
+
+[data-bs-theme="dark"] .modern-table td {
+  color: #d1d5db !important;
+  border-bottom-color: #374151 !important;
+}
+
+[data-bs-theme="dark"] .modern-table td:first-child {
+  color: #f3f4f6 !important;
+}
+
+[data-bs-theme="dark"] .details-list .label {
+  color: #f3f4f6 !important;
+}
+
+[data-bs-theme="dark"] .details-list .value {
+  color: #d1d5db !important;
+}
+
+[data-bs-theme="dark"] .table-empty {
+  color: #9ca3af !important;
+}
+
+/* 13. SORT INDICATOR */
+.sort-indicator {
+  display: inline-block;
+  margin-left: 4px;
+  opacity: 0.6;
+  font-size: 11px;
+}
+
+.sort-indicator.asc::after {
+  content: " ↑";
+}
+
+.sort-indicator.desc::after {
+  content: " ↓";
+}
+
+/* 14. SEARCH HIGHLIGHT */
+.highlight {
+  background-color: #fef08a;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Fix search input placeholder visibility */
+input.form-control::placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+input.form-control::-webkit-input-placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+input.form-control::-moz-placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+input.form-control:-ms-input-placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+input.form-control:-moz-placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}

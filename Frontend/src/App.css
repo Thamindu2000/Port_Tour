@@ -1,0 +1,1045 @@
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes metallicShine {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1) contrast(1.1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.05) contrast(1.15);
+  }
+  100% {
+    background-position: 200% 50%;
+    filter: brightness(1.02) contrast(1.12);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 15px rgba(240,248,255,0.4), 0 0 25px rgba(224,240,255,0.3), 0 0 35px rgba(255,248,220,0.2), 2px 2px 4px rgba(0,0,0,0.2), 0 0 50px rgba(173,216,230,0.3);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(255,255,255,0.7), 0 0 20px rgba(240,248,255,0.5), 0 0 30px rgba(224,240,255,0.4), 0 0 40px rgba(255,248,220,0.3), 2px 2px 4px rgba(0,0,0,0.2), 0 0 60px rgba(173,216,230,0.4);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255,255,255,0.65), 0 0 18px rgba(240,248,255,0.45), 0 0 28px rgba(224,240,255,0.35), 0 0 38px rgba(255,248,220,0.25), 2px 2px 4px rgba(0,0,0,0.2), 0 0 55px rgba(173,216,230,0.35);
+  }
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+}
+
+/* Dark mode skeleton adjustments */
+[data-bs-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #495057 25%, #6c757d 50%, #495057 75%);
+  background-size: 200% 100%;
+}
+
+/* --- FORCE WHITE PLACEHOLDER AND TEXT STYLES --- */
+
+/* Force placeholder color */
+.form-control.white-placeholder::placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.form-control.white-placeholder::-webkit-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.form-control.white-placeholder:-ms-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.form-control.white-placeholder::-ms-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+
+/* Modal form control placeholder overrides */
+.modal .form-control::placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.modal .form-control::-webkit-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.modal .form-control:-ms-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.modal .form-control::-ms-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+
+/* Force other text colors on the card */
+.card[style*="rgba(0, 0, 0, 0.25)"] .form-label,
+.card[style*="rgba(0, 0, 0, 0.25)"] h2,
+.card[style*="rgba(0, 0, 0, 0.25)"] h3,
+.card[style*="rgba(0, 0, 0, 0.25)"] p,
+.card[style*="rgba(0, 0, 0, 0.25)"] a {
+  color: #ffffff !important;
+}
+
+/* Ensure links are bold and white */
+.card[style*="rgba(0, 0, 0, 0.25)"] a {
+   font-weight: bold;
+}
+
+/* Scoped auth-page overrides to ensure white text on Login/Register/Reset pages */
+.auth-page .card,
+.auth-page .card h2,
+.auth-page .card h3,
+.auth-page .card p,
+.auth-page .card .form-label,
+.auth-page .card a,
+.auth-page .card .input-group-text,
+.auth-page .card .form-control {
+  color: #ffffff !important;
+}
+
+.auth-page .form-control.white-placeholder::placeholder,
+.auth-page .white-placeholder::placeholder {
+  color: rgba(255, 255, 255, 0.85) !important;
+  opacity: 1 !important;
+}
+
+/* make sure input text is white */
+.auth-page .form-control.white-placeholder,
+.auth-page .form-control {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* keep buttons readable */
+.auth-page .btn,
+.auth-page .btn-primary {
+  color: #ffffff !important;
+}
+
+/* Auth page component classes for cleaner code (used by Login/Register/Reset) */
+.auth-page {
+  min-height: 100vh;
+  padding: 40px 0;
+  background-color: #0b0b0b; /* keep dark background used by inline styles before */
+}
+
+.auth-page .auth-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+.auth-page .auth-card h2,
+.auth-page .auth-card h3,
+.auth-page .auth-card p,
+.auth-page .auth-card .form-label,
+.auth-page .auth-card a {
+  color: #ffffff !important;
+}
+
+.auth-page .auth-input-group-text {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: none;
+  color: #ffffff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.auth-page .auth-form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;
+  color: #ffffff;
+}
+
+.auth-page .auth-password-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.auth-page .auth-btn {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background: #2563eb;
+  border: none;
+  padding: 12px;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: #ffffff;
+}
+
+.auth-page .auth-card .text-center p {
+  color: #ffffff;
+}
+
+/* helpers for rounded corners used by components */
+.auth-page .auth-form-control.rounded-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.auth-page .auth-form-control.rounded-right-0 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* modal-specific auth styles (for forgot password modal) */
+.auth-modal .modal-title,
+.auth-modal .form-label {
+  color: #ffffff !important;
+}
+.auth-modal .form-control {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+.auth-modal .modal-footer .btn {
+  color: #ffffff !important;
+}
+
+/* ========== PREMIUM GLASSMORPHISM EFFECTS FOR ALL POPUPS ========== */
+
+/* Hide Bootstrap Modal Header - We use custom header */
+.modal-header {
+  display: none !important;
+}
+
+/* Custom Modal Body - No padding or background */
+.modal-body-custom {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Global Modal Glassmorphism */
+.modal.show {
+  background: rgba(0, 0, 0, 0.5) !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-dialog {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Premium Glassy Modal Content */
+.modal-content {
+  background: rgba(255, 255, 255, 0.11) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: transparent !important;
+  display: none !important;
+}
+
+.custom-modal-container {
+  background: transparent !important;
+}
+
+/* Custom Header Styling */
+.custom-modal-container > div:first-child {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1.5rem 2rem 1rem 2rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: transparent !important;
+}
+
+.modal-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+}
+
+.modal-body {
+  color: #ffffff !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: transparent !important;
+}
+
+.modal-body .form-label {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Modal Buttons */
+.modal .btn-primary {
+  background: linear-gradient(135deg, #0033a0 0%, #0052cc 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 51, 160, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.modal .btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 51, 160, 0.4) !important;
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%) !important;
+}
+
+/* Close Button Styling */
+.modal-header .btn-close {
+  opacity: 0.8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+/* Form Controls in Modals */
+.modal .form-control {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease !important;
+}
+
+.modal .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 51, 160, 0.25) !important;
+}
+
+.modal .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Input Group in Modals */
+.modal .input-group-text {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+/* Dropdown in Modals */
+.modal .dropdown-menu {
+  background: rgba(30, 30, 30, 0.95) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modal .dropdown-item {
+  color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+.modal .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* Alert in Modals */
+.modal .alert {
+  background: rgba(220, 53, 69, 0.2) !important;
+  border: 1px solid rgba(220, 53, 69, 0.4) !important;
+  color: #ffcccc !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 12px !important;
+}
+
+/* Success Alert */
+.modal .alert-success {
+  background: rgba(40, 167, 69, 0.2) !important;
+  border: 1px solid rgba(40, 167, 69, 0.4) !important;
+  color: #ccffcc !important;
+}
+
+/* Badge in Modals */
+.modal .badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 12px !important;
+}
+
+/* Card in Modals */
+.modal .card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #ffffff !important;
+  border-radius: 15px !important;
+}
+
+.modal .card-header {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* List in Modals */
+.modal .list-group-item {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.modal .list-group-item:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Check and Radio in Modals */
+.modal .form-check-input {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.modal .form-check-input:checked {
+  background-color: rgba(0, 51, 160, 0.8) !important;
+  border-color: rgba(0, 51, 160, 1) !important;
+}
+
+/* Link in Modals */
+.modal a,
+.modal .btn-link {
+  color: #87ceeb !important;
+  transition: all 0.3s ease !important;
+}
+
+.modal a:hover,
+.modal .btn-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* ========== FIX FOR POPUP OVERLAY ISSUE ========== */
+/* CRITICAL: Ensure modal is always above any overlays */
+.modal {
+  z-index: 10001 !important;
+  background-color: transparent !important;
+}
+
+.modal.show {
+  z-index: 10001 !important;
+  filter: none !important;
+  background-color: transparent !important;
+}
+
+.modal-dialog {
+  z-index: 10001 !important;
+}
+
+.modal-content {
+  z-index: 10001 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Hide any page overlays when modal is open */
+.App[style*="filter: blur"] > * {
+  position: relative;
+  z-index: auto !important;
+}
+
+/* Ensure app blur doesn't affect modal */
+.modal.show,
+.modal-dialog,
+.modal-content {
+  filter: none !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* ========== END GLASSMORPHISM EFFECTS ========== */
+
+/* ========== COMPREHENSIVE DARK MODE STYLES ========== */
+
+/* Dark Mode Root Variables */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #f8f9fa;
+  --bs-border-color: #3a3a3a;
+  --bs-form-control-bg: #2d2d2d;
+  --bs-form-control-color: #f8f9fa;
+  --bs-form-control-border-color: #3a3a3a;
+  --bs-btn-bg: #3a3a3a;
+  --bs-btn-color: #f8f9fa;
+  --bs-card-bg: #2d2d2d;
+  --bs-card-border-color: #3a3a3a;
+}
+
+/* Dark Mode Body */
+[data-bs-theme="dark"] body {
+  background-color: #1a1a1a !important;
+  color: #f8f9fa !important;
+}
+
+/* Dark Mode Form Controls */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] textarea {
+  background-color: #2d2d2d !important;
+  color: #f8f9fa !important;
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus,
+[data-bs-theme="dark"] textarea:focus {
+  background-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+  border-color: #ffc107 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] textarea::placeholder {
+  color: #a0a0a0 !important;
+  opacity: 0.7 !important;
+}
+
+/* Dark Mode Buttons */
+[data-bs-theme="dark"] .btn-primary {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .btn-primary:hover {
+  background-color: #004494 !important;
+  border-color: #004494 !important;
+}
+
+[data-bs-theme="dark"] .btn-secondary {
+  background-color: #3a3a3a !important;
+  border-color: #4a4a4a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .btn-secondary:hover {
+  background-color: #4a4a4a !important;
+  border-color: #5a5a5a !important;
+}
+
+[data-bs-theme="dark"] .btn-light {
+  background-color: #3a3a3a !important;
+  border-color: #4a4a4a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .btn-light:hover {
+  background-color: #4a4a4a !important;
+  border-color: #5a5a5a !important;
+  color: #ffffff !important;
+}
+
+/* Dark Mode Cards */
+[data-bs-theme="dark"] .card {
+  background-color: #2d2d2d !important;
+  border: 2px solid #4a5568 !important;
+  color: #f8f9fa !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-bs-theme="dark"] .card-header {
+  background-color: #1f1f1f !important;
+  border-bottom: 2px solid #4a5568 !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .card-footer {
+  background-color: #1f1f1f !important;
+  border-top: 2px solid #4a5568 !important;
+}
+
+/* Dark Mode Tables */
+[data-bs-theme="dark"] .table {
+  color: #f8f9fa !important;
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .table-dark {
+  background-color: #2d2d2d !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .table-dark thead th {
+  background-color: #1f1f1f !important;
+  color: #f8f9fa !important;
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .table-dark tbody + tbody {
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dark Mode Alerts */
+[data-bs-theme="dark"] .alert {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .alert-info {
+  background-color: rgba(23, 162, 184, 0.15) !important;
+  border-color: #17a2b8 !important;
+  color: #87ceeb !important;
+}
+
+[data-bs-theme="dark"] .alert-warning {
+  background-color: rgba(255, 193, 7, 0.15) !important;
+  border-color: #ffc107 !important;
+  color: #ffc107 !important;
+}
+
+[data-bs-theme="dark"] .alert-danger {
+  background-color: rgba(220, 53, 69, 0.15) !important;
+  border-color: #dc3545 !important;
+  color: #ff6b6b !important;
+}
+
+[data-bs-theme="dark"] .alert-success {
+  background-color: rgba(40, 167, 69, 0.15) !important;
+  border-color: #28a745 !important;
+  color: #51cf66 !important;
+}
+
+/* Dark Mode Modals */
+[data-bs-theme="dark"] .modal-content {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .modal-header {
+  background-color: #1f1f1f !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .modal-header .btn-close {
+  filter: invert(1) !important;
+}
+
+[data-bs-theme="dark"] .modal-body {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+  background-color: #1f1f1f !important;
+  border-color: #3a3a3a !important;
+}
+
+/* Dark Mode Lists */
+[data-bs-theme="dark"] .list-group-item {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .list-group-item.active {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+[data-bs-theme="dark"] .list-group-item:hover {
+  background-color: #3a3a3a !important;
+}
+
+/* Dark Mode Badges */
+[data-bs-theme="dark"] .badge {
+  background-color: #0056b3 !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .badge-secondary {
+  background-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .badge-success {
+  background-color: #28a745 !important;
+}
+
+[data-bs-theme="dark"] .badge-danger {
+  background-color: #dc3545 !important;
+}
+
+[data-bs-theme="dark"] .badge-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+[data-bs-theme="dark"] .badge-info {
+  background-color: #17a2b8 !important;
+}
+
+/* Dark Mode Spinners */
+[data-bs-theme="dark"] .spinner-border {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  border-right-color: #ffc107 !important;
+}
+
+[data-bs-theme="dark"] .spinner-grow {
+  background-color: #ffc107 !important;
+}
+
+/* Dark Mode Pagination */
+[data-bs-theme="dark"] .pagination .page-link {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-link:hover {
+  background-color: #3a3a3a !important;
+  border-color: #3a3a3a !important;
+  color: #ffc107 !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-item.active .page-link {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+/* Dark Mode Navs and Tabs */
+[data-bs-theme="dark"] .nav-tabs {
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link {
+  color: #a0a0a0 !important;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link:hover {
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link.active {
+  background-color: #2d2d2d !important;
+  border-color: #ffc107 #3a3a3a #2d2d2d #3a3a3a !important;
+  color: #ffc107 !important;
+}
+
+/* Dark Mode Tooltips and Popovers */
+[data-bs-theme="dark"] .tooltip-inner {
+  background-color: #1f1f1f !important;
+  color: #f8f9fa !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .popover {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .popover-header {
+  background-color: #1f1f1f !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .popover-body {
+  color: #f8f9fa !important;
+}
+
+/* Dark Mode Breadcrumbs */
+[data-bs-theme="dark"] .breadcrumb {
+  background-color: #2d2d2d !important;
+  border-color: #3a3a3a !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb .breadcrumb-item {
+  color: #a0a0a0 !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb .breadcrumb-item.active {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .breadcrumb .breadcrumb-item a {
+  color: #87ceeb !important;
+}
+
+/* Dark Mode Progress */
+[data-bs-theme="dark"] .progress {
+  background-color: #1f1f1f !important;
+}
+
+[data-bs-theme="dark"] .progress-bar {
+  background-color: #0056b3 !important;
+}
+
+/* Dark Mode Input Groups */
+[data-bs-theme="dark"] .input-group-text {
+  background-color: #1f1f1f !important;
+  border-color: #3a3a3a !important;
+  color: #f8f9fa !important;
+}
+
+/* Dark Mode Checkboxes and Radios */
+[data-bs-theme="dark"] .form-check-input {
+  background-color: #3a3a3a !important;
+  border-color: #4a4a4a !important;
+}
+
+[data-bs-theme="dark"] .form-check-input:checked {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+[data-bs-theme="dark"] .form-check-input:focus {
+  border-color: #ffc107 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+}
+
+/* Dark Mode Custom Component Support */
+[data-bs-theme="dark"] .home-section {
+  background-color: #1a1a1a !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .home-hero {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a3a 50%, #0a1a2a 100%) !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+[data-bs-theme="dark"] .stats-card {
+  background-color: #2d2d2d !important;
+  border: 2px solid #4a5568 !important;
+  color: #f8f9fa !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-bs-theme="dark"] .stats-card:hover {
+  background-color: #3a3a3a !important;
+  border-color: #5a6b7a !important;
+}
+
+/* Dark Mode Scrollbars (webkit browsers) */
+[data-bs-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1f1f1f !important;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #3a3a3a !important;
+  border-radius: 5px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a !important;
+}
+
+/* Dark Mode Links */
+[data-bs-theme="dark"] a {
+  color: #87ceeb !important;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: #b3e5fc !important;
+}
+
+/* ========== END COMPREHENSIVE DARK MODE STYLES ========== */
+
+/* ========== AGGRESSIVE OVERRIDES TO ENFORCE DARK PAGE BACKGROUND ========== */
+/* These rules ensure that the page background and major containers respect dark mode,
+   overriding any component-level backgrounds or inline background-images. */
+
+/* Make sure dark theme applies to root, body and main app wrapper */
+html[data-bs-theme="dark"],
+body[data-bs-theme="dark"],
+#root[data-bs-theme="dark"],
+.App[data-bs-theme="dark"] {
+  background-color: var(--bs-body-bg, #1a1a1a) !important;
+  color: var(--bs-body-color, #f8f9fa) !important;
+  background-image: none !important;
+  color-scheme: dark !important;
+}
+
+/* Force the main application wrappers to use dark background and remove images */
+body[data-bs-theme="dark"] .App,
+body[data-bs-theme="dark"] #root,
+body[data-bs-theme="dark"] .home-section,
+body[data-bs-theme="dark"] .home-hero,
+body[data-bs-theme="dark"] .hero-overlay,
+body[data-bs-theme="dark"] .page,
+body[data-bs-theme="dark"] .container-fluid,
+body[data-bs-theme="dark"] .main-container,
+body[data-bs-theme="dark"] .page-transition {
+  background-color: var(--bs-body-bg, #1a1a1a) !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  color: var(--bs-body-color, #f8f9fa) !important;
+}
+
+/* Some components use inline backgrounds or images; override them explicitly (be conservative) */
+body[data-bs-theme="dark"] [style*="background"],
+body[data-bs-theme="dark"] [class*="bg-"],
+body[data-bs-theme="dark"] [class*="hero"],
+body[data-bs-theme="dark"] [class*="overlay"] {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Provide fallback for often-overridden elements (higher specificity) */
+body[data-bs-theme="dark"] .navbar-custom,
+body[data-bs-theme="dark"] .modal-content,
+body[data-bs-theme="dark"] .card,
+body[data-bs-theme="dark"] .stats-card {
+  background-color: var(--bs-card-bg, #2d2d2d) !important;
+  border-color: var(--bs-card-border-color, #3a3a3a) !important;
+}
+
+/* Ensure body background is applied even if other CSS tries to set a background on html */
+html[data-bs-theme="dark"] {
+  background-color: var(--bs-body-bg, #1a1a1a) !important;
+}
+
+/* End aggressive overrides */
+
+/* ========== BUTTON AND UTILITIES DARK OVERRIDES ========== */
+/* Ensure Bootstrap button variants retain contrast in dark theme */
+[data-bs-theme="dark"] .btn-success {
+  color: #ffffff !important;
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
+[data-bs-theme="dark"] .btn-success:hover {
+  background-color: #157347 !important;
+  border-color: #146c43 !important;
+}
+
+[data-bs-theme="dark"] .btn-info {
+  color: #000000 !important;
+  background-color: #0dcaf0 !important;
+  border-color: #0dcaf0 !important;
+}
+[data-bs-theme="dark"] .btn-info:hover {
+  background-color: #31d2f2 !important;
+  border-color: #25cff2 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+  color: #ffffff !important;
+  background-color: #0d6efd !important;
+}
+
+/* Override utility background classes that force white */
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-gray-100 {
+  background-color: var(--bs-card-bg, #1f2937) !important;
+  color: var(--bs-body-color, #e5e7eb) !important;
+}
+
+/* Ensure table headers that use bg-gray-100 get dark header */
+[data-bs-theme="dark"] .bg-gray-100,
+[data-bs-theme="dark"] thead.bg-gray-100,
+[data-bs-theme="dark"] thead {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+  color: #f3f4f6 !important;
+}
+
+/* Ensure cards using inline white backgrounds are overridden */
+[data-bs-theme="dark"] .card[style*="background-color: #ffffff"],
+[data-bs-theme="dark"] [style*="background-color: #ffffff"] {
+  background-color: var(--bs-card-bg, #2d2d2d) !important;
+  color: var(--bs-body-color, #f8f9fa) !important;
+}
+
+/* Ensure any .table-container/bg-white wrappers are dark */
+[data-bs-theme="dark"] .table-container,
+[data-bs-theme="dark"] .modern-table {
+  background-color: var(--bs-card-bg, #1f2937) !important;
+}
+
+/* End button and utilities overrides */
+
+
